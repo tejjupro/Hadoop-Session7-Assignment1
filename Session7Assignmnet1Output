@@ -1,0 +1,11 @@
+Total MapReduce CPU Time Spent: 3 seconds 720 msec
+OK
+1	BIG-DATA
+1	CASSANDRA
+2	HADOOP
+1	HBASE
+2	HIVE
+1	KAFKA
+1	OOZIE
+2	SPARK
+1	STORM

@@ -1,0 +1,18 @@
+USE employeeDB;
+
+CREATE TABLE employee
+(
+id INT,
+name STRING,
+skills ARRAY<STRING>
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+COLLECTION ITEMS TERMINATED BY ':';
+
+LOAD DATA LOCAL INPATH '/home/acadgild/Desktop/employee.csv'
+INTO TABLE employee;
+
+SELECT id, name, skill
+FROM employee LATERAL VIEW explode(skills) skill_set 
+AS skill;
